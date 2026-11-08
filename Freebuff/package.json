@@ -1,0 +1,63 @@
+{
+  "name": "ai-freebuff-mcp-termux",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-FREEBUFF — a cyberpunk Ink TUI agent for Termux with 9 MCP servers and 4 bundled skills.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bin": {
+    "AI-FREEBUFF": "AI-FREEBUFF"
+  },
+  "files": [
+    "AI-FREEBUFF",
+    "dist",
+    "skills",
+    "mcp-servers",
+    "assets",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "doctor": "node dist/index.js --doctor",
+    "skills": "bash skills/install-skills.sh"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "gradient-string": "^3.0.0",
+    "ink": "^5.2.1",
+    "ink-gradient": "^3.0.0",
+    "ink-select-input": "^6.0.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "keywords": [
+    "termux",
+    "ink",
+    "tui",
+    "agent",
+    "mcp",
+    "react",
+    "typescript",
+    "cyberpunk"
+  ],
+  "author": "AI-FREEBUFF",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morluto/rea"
+  }
+}
